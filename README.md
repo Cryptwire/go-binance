@@ -1,5 +1,7 @@
 ### go-binance
 
+## Notice: This version allows you to change the websocket base URLs for working with Binance.us as well as Binance.com
+
 A Golang SDK for [binance](https://www.binance.com) API.
 
 [![Build Status](https://travis-ci.org/adshao/go-binance.svg?branch=master)](https://travis-ci.org/adshao/go-binance)
@@ -15,15 +17,15 @@ Make sure you have read binance API document before continuing.
 
 ### API List
 
-Name | Description | Status
------------- | ------------ | ------------
-[rest-api.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/rest-api.md) | Details on the Rest API (/api) | <input type="checkbox" checked> Implemented
-[web-socket-streams.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/web-socket-streams.md) | Details on available streams and payloads | <input type="checkbox" checked>  Implemented
-[user-data-stream.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/user-data-stream.md) | Details on the dedicated account stream | <input type="checkbox" checked>  Implemented
-[wapi-api.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/wapi-api.md) | Details on the Withdrawal API (/wapi) | <input type="checkbox" checked>  Partially Implemented
-[margin-api.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/margin-api.md) | Details on the Margin API (/sapi) | <input type="checkbox" checked>  Implemented
-[futures-api.md](https://binance-docs.github.io/apidocs/futures/en/#general-info) | Details on the Futures API (/fapi) | <input type="checkbox" checked>  Partially Implemented
-[delivery-api.md](https://binance-docs.github.io/apidocs/delivery/en/#general-info) | Details on the Coin-M Futures API (/dapi) | <input type="checkbox" checked>  Partially Implemented
+| Name                                                                                                                     | Description                               | Status                                                |
+| ------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- | ----------------------------------------------------- |
+| [rest-api.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/rest-api.md)                     | Details on the Rest API (/api)            | <input type="checkbox" checked> Implemented           |
+| [web-socket-streams.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/web-socket-streams.md) | Details on available streams and payloads | <input type="checkbox" checked> Implemented           |
+| [user-data-stream.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/user-data-stream.md)     | Details on the dedicated account stream   | <input type="checkbox" checked> Implemented           |
+| [wapi-api.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/wapi-api.md)                     | Details on the Withdrawal API (/wapi)     | <input type="checkbox" checked> Partially Implemented |
+| [margin-api.md](https://github.com/binance-exchange/binance-official-api-docs/blob/master/margin-api.md)                 | Details on the Margin API (/sapi)         | <input type="checkbox" checked> Implemented           |
+| [futures-api.md](https://binance-docs.github.io/apidocs/futures/en/#general-info)                                        | Details on the Futures API (/fapi)        | <input type="checkbox" checked> Partially Implemented |
+| [delivery-api.md](https://binance-docs.github.io/apidocs/delivery/en/#general-info)                                      | Details on the Coin-M Futures API (/dapi) | <input type="checkbox" checked> Partially Implemented |
 
 ### Installation
 
@@ -355,4 +357,3 @@ import (
 delivery.UseTestnet = true
 BinanceClient = delivery.NewClient(ApiKey, SecretKey)
 ```
-
