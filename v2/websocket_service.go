@@ -8,11 +8,11 @@ import (
 )
 
 // Endpoints
-const (
-	baseWsMainURL          = "wss://stream.binance.com:9443/ws"
-	baseWsTestnetURL       = "wss://testnet.binance.vision/ws"
-	baseCombinedMainURL    = "wss://stream.binance.com:9443/stream?streams="
-	baseCombinedTestnetURL = "wss://testnet.binance.vision/stream?streams="
+var (
+	BaseWsMainURL          = "wss://stream.binance.com:9443/ws"
+	BaseWsTestnetURL       = "wss://testnet.binance.vision/ws"
+	BaseCombinedMainURL    = "wss://stream.binance.com:9443/stream?streams="
+	BaseCombinedTestnetURL = "wss://testnet.binance.vision/stream?streams="
 )
 
 var (
@@ -25,17 +25,17 @@ var (
 // getWsEndpoint return the base endpoint of the WS according the UseTestnet flag
 func getWsEndpoint() string {
 	if UseTestnet {
-		return baseWsTestnetURL
+		return BaseWsTestnetURL
 	}
-	return baseWsMainURL
+	return BaseWsMainURL
 }
 
 // getCombinedEndpoint return the base endpoint of the combined stream according the UseTestnet flag
 func getCombinedEndpoint() string {
 	if UseTestnet {
-		return baseCombinedTestnetURL
+		return BaseCombinedTestnetURL
 	}
-	return baseCombinedMainURL
+	return BaseCombinedMainURL
 }
 
 // WsPartialDepthEvent define websocket partial depth book event
